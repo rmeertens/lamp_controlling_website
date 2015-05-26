@@ -15,12 +15,12 @@
       <script type="text/javascript" language="javascript">
          $(document).ready(function() {
             $("#driverOn").click(function(event){
-               $.getJSON('http://192.168.2.3:8030/lamp/1', function(jd) {
+               $.getJSON('http://server.duomusico.com:8030/lamp/1', function(jd) {
                 console.log(jd);
                });
             });
              $("#driverOff").click(function(event){
-               $.getJSON('http://192.168.2.3:8030/lamp/0', function(jd) {
+               $.getJSON('http://server.duomusico.com:8030/lamp/0', function(jd) {
                 console.log(jd);
                });
             });
