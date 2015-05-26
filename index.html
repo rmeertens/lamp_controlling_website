@@ -9,9 +9,25 @@
   <link rel="stylesheet" href="stylesheets/stylesheet.css" media="screen">
   <link rel="stylesheet" href="stylesheets/github-dark.css">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        
   <script type="text/javascript" src="javascripts/script.js"></script>
-
+	
+      <script type="text/javascript" language="javascript">
+         $(document).ready(function() {
+            $("#driverOn").click(function(event){
+               $.getJSON('http://192.168.2.3:8030/lamp/1', function(jd) {
+                console.log(jd);
+               });
+            });
+             $("#driverOff").click(function(event){
+               $.getJSON('http://192.168.2.3:8030/lamp/0', function(jd) {
+                console.log(jd);
+               });
+            });
+         });
+      </script>
   <title>Lamp controlling website</title>
+  
   <meta name="description" content="I always wanted to create a site that is able to control a lamp in my own room... here it finally is. ">
 
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -40,6 +56,10 @@
 <a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
 
 <p>Buttons here.</p>
+	
+      <input type="button" id="driverOn" value="ON" />
+      	
+      <input type="button" id="driverOff" value="OFF" />
         </article>
       </div>
     </div>
